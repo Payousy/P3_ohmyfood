@@ -1,0 +1,749 @@
+html,body,p,ol,ul,li,dl,dt,dd,blockquote,figure,fieldset,legend,textarea,pre,iframe,hr,h1,h2,h3 ,h4,h5,h6{margin:0;padding:0}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}ul{list-style:none}bouton, input,select{margin:0}html{box-sizing:border-box}*,*::before,*::after{box-sizing:inherit}img,video{height:auto;max-width:100% }iframe{border:0}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}
+
+/**Variables*/
+$couleur-primaire: #9356DC;
+$couleur-secondaire: #FF79DA;
+$couleur-tertiaire: #99E2D0;
+
+
+/**Mixins*/
+@mixin flexcenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin flexbetween {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flexaround {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+@mixin flexcolumn {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+@mixin btn-shadow {
+    box-shadow: rgb(0 0 0 / 16%) 0px 3px 6px, rgb(0 0 0 / 23%) 0px 3px 6px;
+}
+
+@media screen and (min-width: 260px) {
+
+    .backgrey {
+    background: #f2f2f2f2;
+    }
+    .margeTitre {
+        padding: 10px;
+        margin: 50px;
+        margin-right: auto;
+
+        h1 {
+            font-weight: bold; 
+        }
+        
+    }
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+
+    p {
+        text-align: center;
+        padding: 10px;
+    }
+}
+header img {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+}
+.reserver {
+    font-size: x-large;
+    font-weight: bold;
+    color: black;
+    }
+
+.logo {
+        padding: 15px;
+        height: auto;
+        object-fit: cover;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+
+        &_logo--restaurant {
+            padding-top: 10px;
+            padding-bottom: 15px;
+            padding-right: 20px;
+            margin-right: 45px;
+        }
+
+        &_img {
+            width: 50%;
+            height: auto;
+            object-fit: cover;
+        }
+}
+
+
+
+.backhead {
+    background: rgba(128, 128, 128, 0.062);
+    padding-bottom: 50px;
+}
+
+
+.btn {
+    background: #f2f2f2f2;
+    border-radius: 3px;
+}
+
+.btn__Explorer {
+    background: linear-gradient(180deg, #ff79da, 43%, #9356dc);
+    padding: 15px;
+    border-radius: 30px;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    border-style: none;
+    @include btn-shadow;
+    transition: all 0.5s;
+    transform: scale(0.8);
+
+    
+    &:hover {
+        background: linear-gradient(180deg, #ff79da, 43%, #9356dc);
+        transition: 0.5s ease-in-out;
+        transform: scale(1);
+    }
+    
+    &--commander {
+        margin: 50px;
+    }
+}
+        
+.btn__Explorer--centrer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chprecherche {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2f2f2f2;
+    padding-top: 10px;
+}
+
+.chprecherche--icon {
+    padding: 10px;
+}
+
+.chprecherche--input {
+    border: none;
+    background: #f2f2f2f2;
+    font-weight: bold;
+    color: black;
+    outline: none;
+}
+
+
+    .Presentation {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+    
+
+        div {
+            margin-bottom: 15px;
+        }
+        .Presntation_rubriques {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 10px;
+            padding-right: 25px;
+            border-radius: 15px;
+
+        
+            .Presentation_rubriques--icons {
+                margin-right: 15px;
+                margin-left: 30px;
+                padding-top: 2px;
+            }
+        p {
+            background-color: #9356DC;
+            color: white;
+            position: absolute;
+            padding: 3px 8px 3px 8px;
+            border-radius: 600px;
+            margin-left: -10px;
+            
+        }
+    }
+    
+    }
+    .Carterestaurants {
+    
+        padding: 5px;
+        background-color: #f2f2f2f2;
+
+        a {
+            text-decoration-style: none;
+            text-decoration-line: none;
+        }
+        h1 {
+            padding: 10px;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        span {
+            position: absolute;
+            font-size: 12px;
+            font-weight: bold;
+            top: auto;
+            left: 80%;
+            background-color: $couleur-tertiaire;
+            padding: 5px;
+            margin-top: 10px;
+            color: green;
+            
+        }
+    }
+
+
+
+.carte {
+    position: relative;
+    margin-bottom: 30px;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 5px 5px 15px 5px rgb(0 0 0 / 10%);
+    transition: all 0.5ms;
+    transform: scale(0.9);
+    &:hover {
+        transform: scale(1);
+        transition: 0.5ms ease-in-out;
+    }
+}
+
+ img {
+            
+  object-fit: cover;
+  width: 300%;
+  height: 150px;
+  border-radius: 20px 20px 0 0 ;
+}
+
+
+        
+
+.cartelements {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    color: black;
+    
+    h2 {
+        font-weight: bold;
+        font-size: 16px;
+    }
+}
+
+
+.heart {
+    position: relative;
+
+    i {
+        font-size: 24px;
+    }
+
+    i.filled {
+        position: absolute;
+        right: 0px;
+        transition: all 0.8s;
+        color: transparent;
+        opacity: 0;
+        
+        &:hover {
+            opacity: 1;
+            background: linear-gradient(180deg, #ff79da, 43%, #9356dc);-webkit-background-clip: text;
+            background-clip: text;
+
+        }
+    }
+    
+   
+}
+
+
+
+    /**Debut Menu La palette du goût*/
+.imgrestaurants {
+    width: 100%;
+    height: 255px;
+    object-fit: cover;
+}
+
+.header_menu {
+    @include flexaround;
+}
+
+    .menus {
+        background: #f2f2f2f2;
+        margin-top: -45px;
+        border-radius: 35px 35px 0px 0px;
+
+        &_nomresto {
+            @include flexbetween;
+            padding: 30px;
+        }
+        
+    }
+
+    .etapes {
+        margin: 30px 0px 0px 15px;
+        border-bottom: solid ;
+        border-color: $couleur-tertiaire;
+        width: 40px;
+    }
+
+    .presentationcarte {
+        @include flexcolumn;
+        
+    }
+
+    .plat {
+            border-radius: 10px;
+            background: white;
+            padding: 15px;
+            margin: 10px
+
+        
+            
+        }
+    .platcompos {
+            @include flexbetween;
+        }
+
+        .taillecarteplat {
+            width: 100%
+        }
+
+
+
+    .carte-plat {
+            @include flexbetween;
+            border-radius: 10px;
+            background: white;
+            padding: 15px;
+            margin: 30px;
+            cursor: pointer;
+            box-shadow: 5px 5px 15px 5px rgb(0 0 0 / 10%);
+
+        &_prix-check {
+            @include flexbetween;
+            position: relative;
+
+            &__check{
+                z-index: -2;
+                position: absolute;
+                right: -15px;
+                color: white;
+                background: $couleur_tertiaire;
+                padding: 15px;
+                border-radius: 0 10px 10px 0;
+            }
+        &__prix{
+            padding-right: 10px;
+        }
+        
+        }
+    }
+
+    .carte_icon {
+        font-size: 30px;
+    
+    }
+
+    .carte_icon:hover {
+        animation:  rotation-check 0.5s ease-in-out;
+        transform-origin: right;
+    }
+
+    .carte_titre {
+        
+        font-weight: bold;
+    }
+
+    .carte_p {
+        margin: 0;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+    .carte_titre_p {
+        margin-left: 20px;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    .carte-plat:hover .carte-plat_prix-check__prix {
+        padding-right: 50px;
+        transition: 0.5s ease-in-out;
+    }
+
+    .carte-plat:hover .carte-plat_prix-check__check {
+        z-index: 10;
+        animation: slide-left 0.5s ease-in-out;
+        transform-origin: right;
+    }
+
+
+    /**Définition des @keyframes*/
+
+    @keyframes rotation-check {
+        from {
+            transform: rotate(0);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    @keyframes slide-left {
+        0% {
+            transform: scaleX(0);
+        }
+
+        100% {
+            transform: scale(-50px);
+        }
+    }
+
+
+
+    /*Keyframes Apparution des cartes plats derserts**/
+
+
+    @keyframes carte-descendante {
+        0% {
+            
+            transform: translate(0.5);
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    .apparution-carte {
+        transition-property: transform translate(1) 600ms ease-in-out;
+        animation: carte-descendante 4s both;
+    }
+
+    #case-1 {
+        
+        animation-delay: 0.1S;
+    }
+
+    #case-2 {
+        animation-delay: 0.2s;
+    }
+
+    #case-3 {
+        animation-delay: 0.3S;
+    }
+
+    #case-4 {
+        animation-delay: 0.4S;
+    }
+
+    #case-5 {
+        animation-delay: 0.5S;
+    }
+
+    #case-6 {
+        animation-delay: 0.6S;
+    }
+
+    #case-7 {
+        animation-delay: 0.7S;
+    }
+
+    #case-8 {
+        animation-delay: 0.8S;
+    }
+
+    #case-9 {
+        animation-delay: 0.9S;
+    }
+
+
+    /*Debut section footer**/
+
+    footer {
+        background: black;
+        color: white;
+        padding-left: 10px;
+    
+    P {
+        padding: 5px;
+        .icons {
+            padding-right: 10px;
+        }
+    }
+    img {
+        width: 50%;
+        height: auto;
+        padding: 25px 5px 15px 5px;
+        filter: invert(100%);
+        object-fit: cover;
+        }
+        
+    }
+
+
+}
+
+
+
+@media screen and (min-width: 576px) {
+    header {
+        display: block;
+    }
+    .logo {
+        width: auto;
+    }
+
+    .margeTitre {
+        padding-top: 50px;
+        margin: 0%;
+        
+    }
+
+    .Carterestaurants {
+        span {
+            position: absolute;
+            top: auto;
+            left: 85%; 
+        }
+    }
+
+}
+
+@media screen and (min-width: 768px) {
+    
+    .fonctionnement {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+    
+    .margeTitre {
+        margin-right: 80%;
+    }
+
+
+    .entreplatdessert {
+        display: flex;
+        justify-content: space-around;
+    }
+
+}
+
+
+@media screen and (min-width: 892px) {
+
+    .blokcards {
+        display: flex;
+        justify-content: space-around;
+        padding-bottom: 100px;
+
+        &_elements {
+            width: 45%;
+
+        }
+    }
+    .Carterestaurants  {
+
+        h1  {
+            padding: 25px;
+        }
+
+    
+
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+    .entreplatdessert {
+        display: flex;
+        
+       
+    }
+}
+
+@media screen and (min-width: ≥ 1400px) {
+    .entreplatdessert {
+        display: flex;
+        
+       
+    }
+}
+
+@keyframes flash {
+    0% {
+        background: #f3f3f3;
+        color: $couleur_primaire;
+        text-shadow: 0 0 7px $couleur_primaire;
+        opacity: 0.9;
+    }
+    90% {
+        color: $couleur_secondaire;
+        text-shadow: none;
+        opacity: 0.8;
+    }
+    100% {
+        color: $couleur_tertiaire;
+        text-shadow: 0 0 7px $couleur_primaire;
+        opacity: 0;
+    }
+}
+
+.lettre {
+    color: $couleur_secondaire;
+    font-size: 100px;
+    animation: flash 4s linear forwards;
+    width: 100%;
+    height: 100%;
+    @include flexcenter;
+}
+
+.lettre:nth-child(1) {
+    animation-delay: 0.1;
+}
+
+.lettre:nth-child(2) {
+    animation-delay: 0.2;
+}
+
+.lettre:nth-child(3) {
+    animation-delay: 0.3;
+}
+
+.lettre:nth-child(4) {
+    animation-delay: 0.4;
+}
+
+.lettre:nth-child(5) {
+    animation-delay: 0.5;
+}
+
+.lettre:nth-child(6) {
+    animation-delay: 0.6;
+}
+
+.lettre:nth-child(7) {
+    animation-delay: 0.7;
+}
+
+.lettre:nth-child(8) {
+    animation-delay: 0.8;
+}
+.lettre:nth-child(9) {
+    animation-delay: 0.9;
+}
+
+.loader {
+    /* border: 10px solid #f3f3f3;
+     border-top:  10px solid;
+     border-bottom:  10px solid;
+     border-right: 10px solid $couleur_primaire;
+     border-left: 10px solid $couleur_secondaire;
+     background: $couleur_secondaire;*/
+     @include flexcenter;
+    /* border-radius: 50%;*/
+     width: 100%;
+     height: 100%;
+     animation: flash 5s ease-in-out forwards; 
+     position: fixed;
+     right: 0;
+     left: 0;
+     top: 0;
+     bottom: 0;
+}
+
+@media screen and (min-width: 892px) {
+
+    .blokcards {
+        display: flex;
+        justify-content: space-around;
+        padding-bottom: 100px;
+
+        &_elements {
+            width: 45%;
+
+        }
+    }
+    .Carterestaurants  {
+
+        h1  {
+            padding: 25px;
+        }
+
+    
+
+    }
+
+    
+}
+
+@media screen and (min-width: 768px) {
+
+    .fonctionnement {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+}
+
+.margeTitre {
+    margin-right: 80%;
+}
+
+
+.entreplatdessert {
+    display: flex;
+/* flex-wrap: wrap; */
+justify-content: space-around;
+}
+
+}
+
+@media screen and (min-width: 576px) {
+    header {
+        display: block;
+    }
+    .logo {
+        width: auto;
+    }
+
+    .margeTitre {
+        padding-top: 50px;
+        margin: 0%;
+        
+    }
+}
+
