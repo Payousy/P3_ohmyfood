@@ -1,0 +1,20 @@
+@media screen and (min-width: 260px) {
+  footer {
+    background: black;
+    color: white;
+    padding-left: 10px;
+  }
+  footer P {
+    padding: 5px;
+  }
+  footer P .icons {
+    padding-right: 10px;
+  }
+  footer img {
+    width: 50%;
+    height: auto;
+    padding: 25px 5px 15px 5px;
+    filter: invert(100%);
+    object-fit: cover;
+  }
+}

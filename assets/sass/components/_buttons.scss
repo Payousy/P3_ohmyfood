@@ -1,0 +1,65 @@
+/**Mixins*/
+
+@mixin flexcenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flexbetween {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flexaround {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@mixin flexcolumn {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+@mixin btn-shadow {
+    box-shadow: rgb(0 0 0 / 16%) 0px 3px 6px, rgb(0 0 0 / 23%) 0px 3px 6px;
+}
+
+
+.btn {
+    background: #f2f2f2f2;
+    border-radius: 3px;
+}
+
+.btn__Explorer {
+    background: linear-gradient(180deg, #ff79da, 43%, #9356dc);
+    padding: 15px;
+    border-radius: 30px;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    border-style: none;
+    @include btn-shadow;
+    transition: all 0.5s;
+    transform: scale(0.8);
+
+    
+    &:hover {
+        background: linear-gradient(180deg, #ff79da, 43%, #9356dc);
+        transition: 0.5s ease-in-out;
+        transform: scale(1);
+    }
+    
+    &--commander {
+        margin: 50px;
+    }
+}
+        
+.btn__Explorer--centrer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

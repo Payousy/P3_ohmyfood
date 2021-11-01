@@ -1,0 +1,123 @@
+$couleur-primaire: #9356DC;
+$couleur-secondaire: #FF79DA;
+$couleur-tertiaire: #99E2D0;
+
+@media screen and (min-width: 260px) {
+    .Carterestaurants {
+    
+    padding: 5px;
+    background-color: #f2f2f2f2;
+
+    a {
+        text-decoration-style: none;
+        text-decoration-line: none;
+    }
+    h1 {
+        padding: 10px;
+        font-weight: bold;
+        font-size: 20px;
+    }
+    span {
+        position: absolute;
+        font-size: 12px;
+        font-weight: bold;
+        top: auto;
+        left: 80%;
+        background-color: $couleur-tertiaire;
+        padding: 5px;
+        margin-top: 10px;
+        color: green;
+        
+    }
+}
+
+
+.carte {
+display: -ms-grid;
+display: grid;
+grid-gap: 40px;
+position: relative;
+margin-bottom: 30px;
+border-radius: 20px;
+background-color: white;
+box-shadow: 5px 5px 15px 5px rgb(0 0 0 / 10%);
+transition: all 0.5ms;
+transform: scale(0.9);
+    &:hover {
+    transform: scale(1);
+    transition: 0.5ms ease-in-out;
+    }
+}
+
+.cartelements {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    color: black;
+    
+    h2 {
+        font-weight: bold;
+        font-size: 16px;
+    }
+}
+
+
+.heart {
+    position: relative;
+
+    i {
+        font-size: 24px;
+    }
+
+    i.filled {
+        position: absolute;
+        right: 0px;
+        transition: all 0.8s;
+        color: transparent;
+        opacity: 0;
+        
+        &:hover {
+            opacity: 1;
+            background: linear-gradient(180deg, #ff79da, 43%, #9356dc);-webkit-background-clip: text;
+            background-clip: text;
+
+        }
+    } 
+}
+
+#restaurants img {
+    object-fit: cover;
+    width: 300%;
+    height: 150px;
+    border-radius: 20px 20px 0 0 ;
+}
+
+}
+
+
+
+/////////////////////////
+
+@media screen and (min-width: 892px) {
+
+    .blokcards {
+        display: flex;
+        justify-content: space-around;
+        padding-bottom: 100px;
+
+        &_elements {
+            width: 45%;
+
+        }
+    }
+    .Carterestaurants  {
+
+        h1  {
+            padding: 25px;
+        }
+
+    
+
+    }
+}

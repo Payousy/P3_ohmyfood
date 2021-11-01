@@ -1,0 +1,57 @@
+@media screen and (min-width: 260px) {
+  .Presentation {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .Presentation div {
+    margin-bottom: 15px;
+  }
+  .Presentation .Presntation_rubriques {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-right: 25px;
+    border-radius: 15px;
+  }
+  .Presentation .Presntation_rubriques .Presentation_rubriques--icons {
+    margin-right: 15px;
+    margin-left: 30px;
+    padding-top: 2px;
+  }
+  .Presentation .Presntation_rubriques p {
+    background-color: #9356DC;
+    color: white;
+    position: absolute;
+    padding: 3px 8px 3px 8px;
+    border-radius: 600px;
+    margin-left: -10px;
+  }
+
+  .margeTitre {
+    padding: 10px;
+    margin: 50px;
+    margin-right: auto;
+  }
+  .margeTitre h1 {
+    font-weight: bold;
+  }
+}
+@media screen and (min-width: 768px) {
+  .fonctionnement {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .margeTitre {
+    margin-right: 80%;
+  }
+
+  .entreplatdessert {
+    display: flex;
+    justify-content: space-around;
+  }
+}
