@@ -1,3 +1,9 @@
+$police-principale: 'Roboto', sans-serif;
+$police-logo: 'Shrikhand', cursive;
+$couleur-primaire: #9356DC;
+$couleur-secondaire: #FF79DA;
+$couleur-tertiaire: #99E2D0;
+
 @mixin flexcenter {
     display: flex;
     justify-content: center;
@@ -27,9 +33,7 @@
 }
 
 
-$couleur-primaire: #9356DC;
-$couleur-secondaire: #FF79DA;
-$couleur-tertiaire: #99E2D0;
+
 
 
 @media screen and (min-width: 260px) {
@@ -40,9 +44,23 @@ $couleur-tertiaire: #99E2D0;
 }
 
 
+.logo_ohmyfood {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 15px;
+}
 
-.header_menu {
-    @include flexaround;
+#logo_menu {
+    font-family: $police-logo;
+    font-size: 40px;
+    padding-right: 25%;
+}
+
+.back_accueil {
+    color: black;
+    font-size: 20px;
 }
 
     .menus {
@@ -55,6 +73,11 @@ $couleur-tertiaire: #99E2D0;
             padding: 30px;
         }
         
+    }
+
+    .menus_nomresto P {
+        font-family: $police-logo;
+        font-size: 25px;
     }
 
     .etapes {

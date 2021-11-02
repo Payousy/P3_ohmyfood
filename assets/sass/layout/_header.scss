@@ -1,13 +1,5 @@
 @import "../utils/variables";
 
-.logo-site {
-    font-family: $police-logo;
-    font-size: 40px;
-}
- .logo a {
-     text-decoration: none;
-     color: black;
- }
 
 @media screen and (min-width: 260px) {
 
@@ -15,31 +7,27 @@
     background: #f2f2f2f2;
     }
 
-header {
-    font-family: $police-principale;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-top: 15px;
+    header {
+        font-family: $police-principale;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 15px;
 
-    p {
-        text-align: center;
-        padding: 10px;
-    }
-}
-header img {
-    width: 50%;
-    height: auto;
-    object-fit: cover;
-}
-.reserver {
-    font-size: x-large;
-    font-weight: bold;
-    color: black;
+        p {
+            text-align: center;
+            padding: 10px;
+        }
     }
 
-.logo {
+    .reserver {
+        font-size: x-large;
+        font-weight: bold;
+        color: black;
+        }
+
+        .logo {
         padding: 15px;
         height: auto;
         object-fit: cover;
@@ -47,45 +35,43 @@ header img {
         justify-content: center;
         align-content: center;
 
-        &_logo--restaurant {
-            padding-top: 10px;
-            padding-bottom: 15px;
-            padding-right: 20px;
-            margin-right: 45px;
+            &_logo-site {
+                font-family: $police-logo;
+                font-size: 40px;
+            }
         }
 
-        /*&_img {
-            width: 50%;
-            height: auto;
-            object-fit: cover;
-        }*/
-}
 
-.backhead {
-    background: rgba(128, 128, 128, 0.062);
-    padding-bottom: 50px;
-}
+    .logo a {
+        text-decoration: none;
+        color: black;
+    }
 
-.chprecherche {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    background-color: #f2f2f2f2;
-    padding-top: 10px;
-}
+    .backhead {
+        background: rgba(128, 128, 128, 0.062);
+        padding-bottom: 50px;
+    }
 
-.chprecherche--icon {
-    padding: 10px;
-}
+    .chprecherche {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background-color: #f2f2f2f2;
+        padding-top: 10px;
+    }
 
-.chprecherche--input {
-    border: none;
-    background: #f2f2f2f2;
-    font-weight: bold;
-    color: black;
-    outline: none;
-}
+    .chprecherche--icon {
+        padding: 10px;
+    }
+
+    .chprecherche--input {
+        border: none;
+        background: #f2f2f2f2;
+        font-weight: bold;
+        color: black;
+        outline: none;
+    }
 
 }
 
