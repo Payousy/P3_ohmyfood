@@ -195,7 +195,8 @@ body {
 }
 @media screen and (min-width: 260px) {
   .Presentation {
-    width: 100%;
+    max-width: 1200px;
+    margin: 15px auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -334,6 +335,8 @@ body {
 }
 @media screen and (min-width: 892px) {
   .blokcards {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-around;
     padding-bottom: 100px;
@@ -591,7 +594,7 @@ body {
 
   .carte_icon:hover {
     animation: rotation-check 0.5s ease-in-out;
-    transform-origin: right;
+    transition: all;
   }
 
   .carte_titre {
@@ -628,7 +631,7 @@ body {
     transform: rotate(0);
   }
   to {
-    transform: rotate(360deg);
+    transform: rotate(180deg);
   }
 }
 @keyframes slide-left {
@@ -695,7 +698,7 @@ body {
     display: flex;
   }
 }
-@media screen and (min-width: ≥ 1400px) {
+@media screen and (min-width: 1400px) {
   .entreplatdessert {
     display: flex;
   }

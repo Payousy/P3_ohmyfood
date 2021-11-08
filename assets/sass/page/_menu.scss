@@ -150,7 +150,7 @@ $couleur-tertiaire: #99E2D0;
 
     .carte_icon:hover {
         animation:  rotation-check 0.5s ease-in-out;
-        transform-origin: right;
+        transition: all;
     }
 
     .carte_titre {
@@ -194,7 +194,7 @@ $couleur-tertiaire: #99E2D0;
     }
 
     to {
-        transform: rotate(360deg);
+        transform: rotate(180deg);
     }
 }
 
@@ -276,7 +276,7 @@ $couleur-tertiaire: #99E2D0;
     }
 }
 
-@media screen and (min-width: ≥ 1400px) {
+@media screen and (min-width: 1400px) {
     .entreplatdessert {
         display: flex;
         
