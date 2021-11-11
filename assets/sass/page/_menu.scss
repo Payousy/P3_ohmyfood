@@ -4,6 +4,10 @@ $couleur-primaire: #9356DC;
 $couleur-secondaire: #FF79DA;
 $couleur-tertiaire: #99E2D0;
 
+@import "../utils/_mixins";
+
+@import "../utils/_variables";
+
 @mixin flexcenter {
     display: flex;
     justify-content: center;
@@ -32,15 +36,90 @@ $couleur-tertiaire: #99E2D0;
     box-shadow: rgb(0 0 0 / 16%) 0px 3px 6px, rgb(0 0 0 / 23%) 0px 3px 6px;
 }
 
+@mixin text-big{
+    font-size: 1.2rem;
+}
 
 
 
+/**New Keyframes**/
 
+
+//Animation ligne verte
+@keyframes underline{
+    0%{
+        transform: scaleX(0);
+    }
+    100%{
+        transform: scaleX(1);
+    }
+}
+
+//Animation qui fait tourner à 360° le check
+@keyframes rotate-center-check{
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+//Animation des suggestions du restaurant avec opacity 
+@keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#case-1 {
+    animation-delay: 0.1s;
+}
+#case-2 {
+    animation-delay: 0.2s;
+}
+#case-3 {
+    animation-delay: 0.3s;
+}
+#case-4 {
+    animation-delay: 0.4s;
+}
+#case-5 {
+    animation-delay: 0.5s;
+}
+#case-6 {
+    animation-delay: 0.6s;
+}
+#case-7 {
+    animation-delay: 0.7s;
+}
+#case-8 {
+    animation-delay: 0.8s;
+}
+#case-9 {
+    animation-delay: 0.9s;
+}
+#case-10 {
+    animation-delay: 1s;
+}
+.page_body {
+        width: 100%;
+    }
 @media screen and (min-width: 260px) {
+    
+    .block_img {
+        width: 100%;
+        margin: 0;
+    }
+    
     .imgrestaurants {
-    width: 100%;
-    height: 255px;
-    object-fit: cover;
+        max-height: 300px;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
 }
 
 
@@ -55,7 +134,8 @@ $couleur-tertiaire: #99E2D0;
 #logo_menu {
     font-family: $police-logo;
     font-size: 40px;
-    padding-right: 25%;
+    width: 50%;
+    
 }
 
 .back_accueil {
@@ -80,107 +160,111 @@ $couleur-tertiaire: #99E2D0;
         font-size: 25px;
     }
 
-    .etapes {
-        margin: 30px 0px 0px 15px;
-        border-bottom: solid ;
-        border-color: $couleur-tertiaire;
-        width: 40px;
-    }
+    
 
     .presentationcarte {
         @include flexcolumn;
         
     }
-
-    .plat {
-            border-radius: 10px;
-            background: white;
-            padding: 15px;
-            margin: 10px
-
-        
-            
-        }
-
-
-    .platcompos {
-            @include flexbetween;
-        }
-
-
-        .taillecarteplat {
-            width: 100%
-        }
-
-
-
-    .carte-plat {
-            @include flexbetween;
-            border-radius: 10px;
-            background: white;
-            padding: 15px;
-            margin: 30px;
-            cursor: pointer;
-            box-shadow: 5px 5px 15px 5px rgb(0 0 0 / 10%);
-
-        &_prix-check {
-            @include flexbetween;
-            position: relative;
-
-            &__check{
-                z-index: -2;
-                position: absolute;
-                right: -15px;
-                color: white;
-                background: $couleur_tertiaire;
-                padding: 15px;
-                border-radius: 0 10px 10px 0;
-            }
-        &__prix{
-            padding-right: 10px;
-        }
-        
-        }
-    }
-
-    .carte_icon {
-        font-size: 30px;
-    
-    }
-
-    .carte_icon:hover {
-        animation:  rotation-check 0.5s ease-in-out;
-        transition: all;
-    }
-
-    .carte_titre {
-        
-        font-weight: bold;
-    }
-
-    .carte_p {
-        margin: 0;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        white-space: nowrap;
-    }
-    .carte_titre_p {
-        margin-left: 20px;
-        overflow: hidden;
-        white-space: nowrap;
-    }
-    .carte-plat:hover .carte-plat_prix-check__prix {
-        padding-right: 50px;
-        transition: 0.5s ease-in-out;
-    }
-
-    .carte-plat:hover .carte-plat_prix-check__check {
-        z-index: 10;
-        animation: slide-left 0.5s ease-in-out;
-        transform-origin: right;
-    }
-
+    /**Nouveau menu**/
+.taillecarteplat {
+    width: 100%
 }
+
+.corps-menu{
+    width: 100%;
+    margin: auto;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    &--title{
+        margin: 0 0 0 34px;
+        font-weight: initial;
+        @include text-big;
+        &::after{
+            content: "";
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: $couleur-tertiaire;
+            animation: underline 2s;
+            animation-fill-mode: both;
+            transform: scale(0);
+        }
+    }
+    &--list{
+        margin: auto;
+        padding: 0;
+        width: 100%;
+    }
+    &__plat{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background-color: white;
+        border-radius: 20px;
+        padding: 0px 0px 0px 20px;
+        margin: 20px auto;
+        width: 90%;
+        height: 80px;
+        @include shadow-box;
+        overflow: hidden;
+        cursor: pointer;
+        .price{
+            margin-left: auto;
+            padding-left: 5px;
+            padding-right: 15px;
+        }
+        .bg-check{
+            background: $color-tertiary;
+            border-radius: 0 20px 20px 0;
+            height: 100%;
+            width: 70px;
+            margin-right: -70px;
+            transition: all 0.4s ease-in-out;
+        }
+        &:hover .bg-check{
+            margin-right: 0;
+        }
+        &:hover .check{
+            animation: rotate-center-check 0.5s ease-in-out;
+        }
+        .check{
+            color: white;
+            font-size: 26px;
+            height: 100%;
+            width: 100%;
+            @include center-element-flex;
+        }
+    }
+}
+.plat{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    &--title{
+        @include text-big;
+        margin: 0;
+        padding-bottom: 5px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    &--desc{
+        margin: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+.appears-opacity {
+    animation: opacity 1s both;
+}
+
+    
+}
+
 
 
 
@@ -212,7 +296,7 @@ $couleur-tertiaire: #99E2D0;
 /*Keyframes Apparution des cartes plats derserts**/
 
 
-@keyframes carte-descendante {
+/*@keyframes carte-descendante {
     0% {
         
         transform: translate(0.5);
@@ -264,22 +348,27 @@ $couleur-tertiaire: #99E2D0;
 
 #case-9 {
     animation-delay: 0.9ms;
-}
+}*/
+
+
+
 
 
 ////////////////////////
-@media screen and (min-width: 1200px) {
-    .entreplatdessert {
+@media screen and (min-width: 1000px) {
+    .presentationcarte {
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    
+    .block_menu {
         display: flex;
-        
-       
     }
 }
 
 @media screen and (min-width: 1400px) {
-    .entreplatdessert {
+    .block_menu {
         display: flex;
-        
-       
     }
 }

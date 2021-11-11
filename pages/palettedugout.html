@@ -15,7 +15,7 @@
 
     <title>Document</title>
 </head>
-<body>
+<body class="page_body">
     <header>
         <div class="logo_ohmyfood">
              <a  href="../index.html">
@@ -31,10 +31,12 @@
     </header>
 
     <main>
-        <div class="presentationcarte">
-            <div>
+        <div class="block_img">
             <img class="imgrestaurants" src="../assets/images/restaurants/La_palette_du_gout.jpg" alt="image restaurant">
         </div>
+        <div class="presentationcarte">
+            
+        <div id="container_menu">
         <div class="menus"> 
             <div class="menus_nomresto">
                 <p>La palette du goût</p>
@@ -43,223 +45,131 @@
                     <i class="fas fa-heart filled"></i>
                 </div>
             </div>
-            <!--Entrées-->
-        <div class="entreplatdessert">
-            <div class="taillecarteplat">
-                <div class="etapes">
-                    <p>ENTREES</p>
-                </div>
-                <!--Plat 1-->
-                <div class="apparution-carte ">
-                <div id="case-1" class="carte-plat">
-                    <div class="carte_titre_p">
-                        <div class="carte_titre">
-                            <p>Fricassée d'escargot</p>
-                        </div>
-                        <div class="carte_p">
-                            <p>Au piment d'Espelette</p>
-                        </div>
-                    </div>
-                        <div class="carte-plat_prix-check">
-                            <div class="carte-plat_prix-check__prix">
-                                25€
-                            </div> 
-                            <div class="carte_icon carte-plat_prix-check__check">
-                                <i class="fas fa-check-circle"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--Plat 2-->
-                <div class="apparution-carte ">
-                <div id="case-2" class="carte-plat">
-                    <div class="carte_titre_p">
-                        <div class="carte_titre">
-                            <p>Foie gras de canard mi-cuit</p>
-                        </div>
-                        <div class="carte_p">
-                            <p>Et ses copeaux de truffe noire</p>
-                        </div>
-                    </div>
-                        <div class="carte-plat_prix-check">
-                            <div class="carte-plat_prix-check__prix">
-                                35€
-                            </div> 
-                            <div class="carte_icon carte-plat_prix-check__check">
-                                <i class="fas fa-check-circle"></i>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-                <!--Plat 3-->
-                <div class="apparution-carte">
-                <div id="case-3" class="carte-plat">
-                    <div class="carte_titre_p">
-                        <div class="carte_titre">
-                            <p>Oeuf au plat</p>
-                        </div>
-                        <div class="carte_p">
-                            <p>Assaisonné à la truffe sur lit de caviar</p>
-                        </div>
-                    </div>
-                        <div class="carte-plat_prix-check">
-                            <div class="carte-plat_prix-check__prix">
-                                20€
-                            </div> 
-                            <div class="carte_icon carte-plat_prix-check__check">
-                                <i class="fas fa-check-circle"></i>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-            </div>
-            <!--Carte PLATS-->
-            <div class="taillecarteplat">
-                <div class="etapes">
-                    <p>PLATS</p>
-                </div>
-                <!--Plat 1-->
-                <div class="apparution-carte">
-                <div id="case-4" class="carte-plat">
-                    <div class="carte_titre_p">
-                        <div class="carte_titre">
-                            <p>Filet de boeuf aux herbes</p>
-                        </div>
-                        <div class="carte_p">
-                            <p>Accompagné de sa ribambelle de légumes</p>
-                        </div>
-                    </div>
-                        <div class="carte-plat_prix-check">
-                            <div class="carte-plat_prix-check__prix">
-                                40€
-                            </div> 
-                            <div class="carte_icon carte-plat_prix-check__check">
-                                <i class="fas fa-check-circle"></i>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-                <!--Plat 2-->
-                <div class="apparution-carte">
-                <div id="case-5" class="carte-plat">
-                    <div class="carte_titre_p">
-                        <div class="carte_titre">
-                            <p>Parmentier de queue de boeuf</p>
-                        </div>
-                        <div class="carte_p">
-                            <p>À la truffe noire sur sa purée de panais</p>
-                        </div>
-                    </div>
-                        <div class="carte-plat_prix-check">
-                            <div class="carte-plat_prix-check__prix">
-                                35€
-                            </div> 
-                            <div class="carte_icon carte-plat_prix-check__check">
-                                <i class="fas fa-check-circle"></i>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-                <!--Plat 3-->
-                <div class="apparution-carte">
-                <div id="case-6" class="carte-plat">
-                    <div class="carte_titre_p">
-                        <div class="carte_titre">
-                            <p>Filet de turbot</p>
-                        </div>
-                        <div class="carte_p">
-                            <p>Aux agrumes</p>
-                        </div>
-                    </div>
-                        <div class="carte-plat_prix-check">
-                            <div class="carte-plat_prix-check__prix">
-                                44€
-                            </div> 
-                            <div class="carte_icon carte-plat_prix-check__check">
-                                <i class="fas fa-check-circle"></i>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-                </div>
 
-            <!--Carte Dessert-->
+            <div class="block_menu">
+            <!--Section Entrées-->
 
-                <div class="taillecarteplat">
-                    <div class="etapes">
-                        <p>DESSERTS</p>
+            <section class="corps-menu">
+                <h3 class="corps-menu--title">ENTRÉES</h3>
+                <div class="corps-menu--list">
+                    <div class="corps-menu__plat appears-opacity" id="case-1">
+                        <div class="plat">
+                            <h4 class="plat--title">Fricassée d'escargot</h4>
+                            <p class="plat--desc">Au piment d'Espelette</p>
+                        </div>
+                        <p class="price">25€</p>
+                        <div class="bg-check">
+                            <i class="fas fa-check-circle check"></i>
+                        </div>
                     </div>
-                    <!--Dessert 1-->
-                    <div class="apparution-carte">
-                    <div id="case-7" class="carte-plat">
-                        <div class="carte_titre_p">
-                            <div class="carte_titre">
-                                <p>Paris-Brest</p>
-                            </div>
-                            <div class="carte_p">
-                                <p>Revisité</p>
-                            </div>
+                    <div class="corps-menu__plat appears-opacity" id="case-2">
+                        <div class="plat">
+                            <h4 class="plat--title">Fricassée d'escargot</h4>
+                            <p class="plat--desc">Au piment d'Espelette</p>
                         </div>
-                            <div class="carte-plat_prix-check">
-                                <div class="carte-plat_prix-check__prix">
-                                    18€
-                                </div> 
-                                <div class="carte_icon carte-plat_prix-check__check">
-                                    <i class="fas fa-check-circle"></i>
-                                </div>
-                            </div>
+                        <p class="price">25€</p>
+                        <div class="bg-check">
+                            <i class="fas fa-check-circle check"></i>
                         </div>
+                    </div>
+                    <div class="corps-menu__plat appears-opacity" id="case-3">
+                        <div class="plat">
+                            <h4 class="plat--title">Fricassée d'escargot</h4>
+                            <p class="plat--desc">Au piment d'Espelette</p>
                         </div>
-                    <!--Dessert 2-->
-                    <div class="apparution-carte">
-                    <div id="case-8" class="carte-plat">
-                        <div class="carte_titre_p">
-                            <div class="carte_titre">
-                                <p>Macaron au chocolat d'exception</p>
-                            </div>
-                            <div class="carte_p">
-                                <p>Et glace à la vanille de Madagascar</p>
-                            </div>
+                        <p class="price">25€</p>
+                        <div class="bg-check">
+                            <i class="fas fa-check-circle check"></i>
                         </div>
-                            <div class="carte-plat_prix-check">
-                                <div class="carte-plat_prix-check__prix">
-                                    22€
-                                </div> 
-                                <div class="carte_icon carte-plat_prix-check__check">
-                                    <i class="fas fa-check-circle"></i>
-                                </div>
-                            </div>
-                        </div>
-                        </div>
-                    <!--Dessert 3-->
-                    <div class="apparution-carte">
-                    <div id="case-9" class="carte-plat">
-                        <div class="carte_titre_p">
-                            <div class="carte_titre">
-                                <p>Mousse au chocolat</p>
-                            </div>
-                            <div class="carte_p">
-                                <p>Au piment d'Espelette et à la truffe noire</p>
-                            </div>
-                        </div>
-                            <div class="carte-plat_prix-check">
-                                <div class="carte-plat_prix-check__prix">
-                                    23€
-                                </div> 
-                                <div class="carte_icon carte-plat_prix-check__check">
-                                    <i class="fas fa-check-circle"></i>
-                                </div>
-                            </div>
-                        </div>
-                        </div>
+                    </div>
                 </div>
-            </div>
+            </section>
 
-                <div class="btn__Explorer--centrer">
+            <!--Section Plat-->
+
+            <section class="corps-menu">
+                <h3 class="corps-menu--title">PLATS</h3>
+                <div class="corps-menu--list">
+                    <div class="corps-menu__plat appears-opacity" id="case-4">
+                        <div class="plat">
+                            <h4 class="plat--title">Fricassée d'escargot</h4>
+                            <p class="plat--desc">Au piment d'Espelette</p>
+                        </div>
+                        <p class="price">25€</p>
+                        <div class="bg-check">
+                            <i class="fas fa-check-circle check"></i>
+                        </div>
+                    </div>
+                    <div class="corps-menu__plat appears-opacity" id="case-5">
+                        <div class="plat">
+                            <h4 class="plat--title">Fricassée d'escargot</h4>
+                            <p class="plat--desc">Au piment d'Espelette</p>
+                        </div>
+                        <p class="price">25€</p>
+                        <div class="bg-check">
+                            <i class="fas fa-check-circle check"></i>
+                        </div>
+                    </div>
+                    <div class="corps-menu__plat appears-opacity" id="case-6">
+                        <div class="plat">
+                            <h4 class="plat--title">Fricassée d'escargot</h4>
+                            <p class="plat--desc">Au piment d'Espelette</p>
+                        </div>
+                        <p class="price">25€</p>
+                        <div class="bg-check">
+                            <i class="fas fa-check-circle check"></i>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--Section Dessert-->
+
+            <section class="corps-menu">
+                <h3 class="corps-menu--title">DESSERTS</h3>
+                <div class="corps-menu--list">
+                    <div class="corps-menu__plat appears-opacity" id="case-7">
+                        <div class="plat">
+                            <h4 class="plat--title">Fricassée d'escargot</h4>
+                            <p class="plat--desc">Au piment d'Espelette</p>
+                        </div>
+                        <p class="price">25€</p>
+                        <div class="bg-check">
+                            <i class="fas fa-check-circle check"></i>
+                        </div>
+                    </div>
+                    <div class="corps-menu__plat appears-opacity" id="case-8">
+                        <div class="plat">
+                            <h4 class="plat--title">Fricassée d'escargot</h4>
+                            <p class="plat--desc">Au piment d'Espelette</p>
+                        </div>
+                        <p class="price">25€</p>
+                        <div class="bg-check">
+                            <i class="fas fa-check-circle check"></i>
+                        </div>
+                    </div>
+                    <div class="corps-menu__plat appears-opacity" id="case-9">
+                        <div class="plat">
+                            <h4 class="plat--title">Fricassée d'escargot</h4>
+                            <p class="plat--desc">Au piment d'Espelette</p>
+                        </div>
+                        <p class="price">25€</p>
+                        <div class="bg-check">
+                            <i class="fas fa-check-circle check"></i>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+        <div class="btn__Explorer--centrer">
                     <button class="btn btn__Explorer btn__Explorer--commander">Commander</button>
                 </div>
+                </div>
+                </div>
             </div>
-        </div>
+
     
     </main>
     <!--footer-->
