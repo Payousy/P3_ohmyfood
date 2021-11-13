@@ -151,6 +151,10 @@ $couleur-tertiaire: #99E2D0;
         &_nomresto {
             @include flexbetween;
             padding: 30px;
+            position: relative;
+            margin-top: -60px;
+            background: #f2f2f2;
+            border-radius: 30px 30px 0 0;
         }
         
     }
@@ -171,7 +175,7 @@ $couleur-tertiaire: #99E2D0;
     width: 100%
 }
 
-.corps-menu{
+.menu{
     width: 100%;
     margin: auto;
     justify-content: center;
@@ -187,6 +191,148 @@ $couleur-tertiaire: #99E2D0;
             width: 50px;
             height: 3px;
             background-color: $couleur-tertiaire;
+            animation: underline 2s;
+            animation-fill-mode: both;
+            transform: scale(0);
+        }
+    }
+    &--list{
+        margin: auto;
+        padding: 0;
+        width: 100%;
+    }
+    &__plat{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background-color: white;
+        border-radius: 20px;
+        padding: 0px 0px 0px 20px;
+        margin: 20px auto;
+        width: 90%;
+        height: 80px;
+        @include shadow-box;
+        overflow: hidden;
+        cursor: pointer;
+        .prix{
+            font-weight: bold;
+            margin-left: auto;
+            padding-left: 5px;
+            padding-right: 15px;
+        }
+        .bg-check{
+            background: $color-tertiary;
+            border-radius: 0 20px 20px 0;
+            height: 100%;
+            width: 70px;
+            margin-right: -70px;
+            transition: all 0.4s ease-in-out;
+        }
+        &:hover .bg-check{
+            margin-right: 0;
+        }
+        &:hover .check{
+            animation: rotate-center-check 0.5s ease-in-out;
+        }
+        .check{
+            color: white;
+            font-size: 26px;
+            height: 100%;
+            width: 100%;
+            @include center-element-flex;
+        }
+    }
+}
+.plat{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    &--title{
+        @include text-big;
+        font-weight: bold;
+        margin: 0;
+        padding-bottom: 5px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    &--desc{
+        margin: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+.appears-opacity {
+    animation: opacity 1s both;
+}
+
+.body-page{
+    width: 100%;
+}
+.mr-header{
+    display: flex;
+    align-items: center;
+    padding: 20px 25px 10px 25px;
+    .link-arrow{
+        font-size: 24px;
+        height: 26px;
+        width: 22px;
+    }
+    .header__logo{
+        margin: auto;
+    }
+}
+
+.block-img{
+    width: 100%;
+    margin:0;
+}
+.img-restaurant{
+    max-height: 300px;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.body-menu{
+    border-radius: 30px 30px 0 0;
+    background-color: $color-sub2;
+}
+.restaurant{
+    margin-top: -60px;
+    position: relative;
+}
+.restaurant-name{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px 0 20px;
+    align-items: center;
+    &__title{
+        font-family: "Shrikhand";
+        letter-spacing: 1px;
+        font-size: 2rem;
+    }
+    &__like{
+        margin: 0;
+    }
+}
+
+/*.corps-menu{
+    margin: auto;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    &--title{
+        margin: 0 0 0 34px;
+        font-weight: initial;
+        @include text-big;
+        &::after{
+            content: "";
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: $color-tertiary;
             animation: underline 2s;
             animation-fill-mode: both;
             transform: scale(0);
@@ -256,21 +402,44 @@ $couleur-tertiaire: #99E2D0;
         overflow: hidden;
         text-overflow: ellipsis;
     }
-}
+}*/
+
 
 .appears-opacity {
     animation: opacity 1s both;
 }
 
-    
+    //bouton 'commmander'
+    .order{
+    @include center-element-flex;
+    padding: 20px 0 40px 0;
+    }
+
+}
+
+@media screen and(min-width: 1024px){
+    .restaurant-name{
+        max-width: 1024px;
+        margin: auto;
+    }
+    .body-menu{
+        margin: auto;
+        max-width: 1200px;
+        &__suggestion{
+            display: flex;
+        }
+    }
+    .menu{
+        width: 400px;
+        min-width: 340px;
+        margin-top: 0;
+    }
 }
 
 
 
 
-
-
-/**Définition des @keyframes*/
+/**Définition des @keyframes*
 
 @keyframes rotation-check {
     from {
@@ -291,7 +460,7 @@ $couleur-tertiaire: #99E2D0;
         transform: scale(-50px);
     }
 }
-
+*/
 
 /*Keyframes Apparution des cartes plats derserts**/
 

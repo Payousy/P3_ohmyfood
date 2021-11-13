@@ -36,18 +36,20 @@
 
 .btn__Explorer {
     background: linear-gradient(180deg, #ff79da, 43%, #9356dc);
-    padding: 15px;
-    border-radius: 30px;
+    padding: 20px;
+    border-radius: 50px;
     color: white;
     font-size: 14px;
     font-weight: bold;
-    border-style: none;
+    letter-spacing: 1px;
+    border: none;
     @include btn-shadow;
     transition: all 0.5s;
     transform: scale(0.8);
 
     
     &:hover {
+        cursor: pointer;
         background: linear-gradient(180deg, #ff79da, 43%, #9356dc);
         transition: 0.5s ease-in-out;
         transform: scale(1);
@@ -55,6 +57,9 @@
     
     &--commander {
         margin: 50px;
+        font-size: 22px;
+        padding: 20px 35px 20px 35px;
+
     }
 }
         
