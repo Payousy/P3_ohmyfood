@@ -1,3 +1,5 @@
+@import "../utils/variables";
+
 @media screen and (min-width: 260px) {
 
     .Presentation {
@@ -25,6 +27,15 @@
             margin-right: 15px;
             margin-left: 30px;
             padding-top: 2px;
+
+        }
+
+        &:hover {
+            cursor: pointer;
+            background-color: #f2eafb;
+            .fas{
+                color: $couleur-primaire;
+            }
         }
 
         p {
@@ -37,6 +48,7 @@
         }
 
     }
+    
 
 }
 

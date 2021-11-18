@@ -221,6 +221,13 @@ body {
     margin-left: 30px;
     padding-top: 2px;
   }
+  .Presentation .Presntation_rubriques:hover {
+    cursor: pointer;
+    background-color: #f2eafb;
+  }
+  .Presentation .Presntation_rubriques:hover .fas {
+    color: #9356DC;
+  }
   .Presentation .Presntation_rubriques p {
     background-color: #9356DC;
     color: white;
